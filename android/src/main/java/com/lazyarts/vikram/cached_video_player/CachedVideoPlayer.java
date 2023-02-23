@@ -83,8 +83,8 @@ final class CachedVideoPlayer {
                     new CacheDataSourceFactory(
                             context,
                             // TODO: need a way to set these programmatically. Maybe fork VideoPlayerPlatformInterface
-                            1024 * 1024 * 1024,
-                            1024 * 1024 * 100);
+                            1024 * 1024 * 350,
+                            1024 * 1024 * 20);
             if (httpHeaders != null && !httpHeaders.isEmpty()) {
                 cacheDataSourceFactory.setHeaders(httpHeaders);
             }
