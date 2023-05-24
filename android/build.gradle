@@ -27,10 +27,10 @@ project.getTasks().withType(JavaCompile){
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 33
 
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 24
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     lintOptions {
@@ -48,5 +48,11 @@ android {
         implementation 'com.google.android.exoplayer:exoplayer-hls:2.17.1'
         implementation 'com.google.android.exoplayer:exoplayer-dash:2.17.1'
         implementation 'com.google.android.exoplayer:exoplayer-smoothstreaming:2.17.1'
+    }
+}
+
+configurations.all {
+    resolutionStrategy {
+        force 'androidx.core:core-ktx:1.6.0'
     }
 }
